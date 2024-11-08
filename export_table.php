@@ -29,6 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['export_table'])) {
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
+        // fetch_assoc() - імена масиву стають ключами
         while($row = $result->fetch_assoc()) {
             $line = "{$row['id']}, {$row['name']}, {$row['email']}, {$row['question1']}, {$row['question2']}, {$row['question3']}, {$row['created_at']}\n";
             fwrite($file, $line);
