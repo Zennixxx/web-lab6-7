@@ -1,5 +1,6 @@
 <?php
 
+// функція збереження результату опитування у вигляді текстового файлу
 function saveSurveyResponse($name, $email, $question1, $question2, $question3) {
     $directory = 'survey';
 
