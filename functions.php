@@ -6,7 +6,7 @@ function saveSurveyResponse($name, $email, $question1, $question2, $question3) {
 
     
     if (!is_dir($directory)) {
-        mkdir($directory, 0755, true);
+        mkdir($directory, 0755, true); //0755 - повний доступ до директорії
     }
 
     $dateTime = date('Y-m-d H:i:s');
